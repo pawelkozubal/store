@@ -12,7 +12,7 @@ import { links } from '@/utils/links';
 import UserIcon from './UserIcon';
 import { SignedIn, SignInButton, SignUpButton, SignedOut } from '@clerk/nextjs';
 import SignOutLink from './SignOutLink';
-import { auth } from '@clerk/nextjs/server';
+import { auth,  } from '@clerk/nextjs/server';
 
 
 const {userId} = auth(); 
