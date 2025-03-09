@@ -20,11 +20,16 @@ function NavSearch() {
     replace(`/products?${params.toString()}`)
   },500); 
 
+
+  function getSearch(){ 
+    return searchParams.get('search')
+  }
+
   useEffect(()=>{
-    if(!searchParams.get('search')){ 
+    if(!getSearch){ 
       setSearch('');
     }
-  },[searchParams.get('search')])
+  },[getSearch])
 
   return (
     <Input type='search' placeholder='search product...' className='max-w-xs dark:bg-muted' onChange={(e)=>{
