@@ -16,10 +16,12 @@ import SignOutLink from './SignOutLink';
 import { auth  } from '@clerk/nextjs/server';
 
 
-const {userId} = auth(); 
+
+function LinksDropdown() { 
+
+  const {userId} = auth(); 
 const isAdmin = userId === process.env.ADMIN_USER_ID;
 
-function LinksDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
