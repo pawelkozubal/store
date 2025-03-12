@@ -23,7 +23,8 @@ function ProductsGrid({products}:{products:Product[]}) {
                                 <Image src={image} alt={name} fill 
                                 sizes='(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw'
                                 priority 
-                                className="transform group-hover:scale-110 transition-transform duration-500"/>
+                                className="transform group-hover:scale-110 transition-transform duration-500"/> 
+                                
                             </div>
                             <div className="mt-4 text-center">
                             <h2 className="text-lg capitalize">{name}</h2> 

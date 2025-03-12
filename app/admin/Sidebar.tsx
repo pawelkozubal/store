@@ -24,7 +24,7 @@ function Sidebar() {
           </Button>
         );
       })}
-    </aside>
+    </aside> 
   );
 }
 export default Sidebar;
