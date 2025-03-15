@@ -20,8 +20,18 @@ export const supabase = createClient(
   };
 
 
-  export const deleteImage = (url:string) => { 
-    const imageName = url.split('/').pop();
-    if(!imageName) throw new Error('Invalid URL'); 
-    return supabase.storage.from(bucket).remove([imageName])
-  }
+  // export const deleteImage = (url:string) => { 
+  //   const imageName = url.split('/').pop();
+  //   if(!imageName) throw new Error('Invalid URL'); 
+  //   return supabase.storage.from(bucket).remove([imageName])
+  // }
+
+
+
+  export const deleteImage = (url: string) => {
+    console.log('url : ', url);
+    const imageName = url.split(`/${bucket}//`)[1];
+   
+    if (!imageName) throw new Error('Invalid URL');
+    return supabase.storage.from(bucket).remove([imageName]);
+  };
