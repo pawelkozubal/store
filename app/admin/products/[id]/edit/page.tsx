@@ -1,4 +1,4 @@
-import { fetchAdminProductDetails, updateProductAction, updateProductImageAction } from '@/utils/actions';
+import { fetchAdminProductDetails, findExistingReview, updateProductAction, updateProductImageAction } from '@/utils/actions';
 import FormContainer from '@/components/form/FormContainer';
 import FormInput from '@/components/form/FormInput';
 import PriceInput from '@/components/form/PriceInput';
@@ -11,6 +11,8 @@ import ImageInputContainer from '@/components/form/ImageInputContainer';
 
 
 async function EditProductPage({ params }: { params: { id: string } }) {
+
+  
   const { id } = params;
   const product = await fetchAdminProductDetails(id);
   const { name, company, description, featured, price } = product;

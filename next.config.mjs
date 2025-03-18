@@ -11,7 +11,11 @@ const nextConfig = {
             hostname:'xmsyrhmqbblgkojmcvkx.supabase.co',
             port: '', 
             pathname: '/storage/v1/object/public/main-bucket/**'
-            }
+            }, 
+            {
+                protocol:'https', 
+                hostname:"img.clerk.com",
+            }, 
         ]
     }
 };
