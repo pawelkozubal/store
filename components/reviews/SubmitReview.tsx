@@ -8,6 +8,7 @@ import TextAreaInput from '@/components/form/TextAreaInput';
 import { Button } from '@/components/ui/button';
 import { createReviewAction } from '@/utils/actions';
 import { useUser } from '@clerk/nextjs';
+
 function SubmitReview({ productId }: { productId: string }) {
   const [isReviewFormVisible, setIsReviewFormVisible] = useState(false);
   const { user } = useUser();
@@ -29,11 +30,7 @@ function SubmitReview({ productId }: { productId: string }) {
               name='authorName'
               value={user?.firstName || 'user'}
             />
-            <input
-              type='hidden'
-              name='authorImageUrl'
-              value={user?.imageUrl || ''}
-            />
+            <input type='hidden' name='authorImageUrl' value={user?.imageUrl} />
             <RatingInput name='rating' />
             <TextAreaInput
               name='comment'
@@ -47,5 +44,4 @@ function SubmitReview({ productId }: { productId: string }) {
     </div>
   );
 }
-
 export default SubmitReview;

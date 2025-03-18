@@ -1,12 +1,14 @@
 'use client';
+
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from '../ui/button';
+
 function Comment({ comment }: { comment: string }) {
   const [isExpanded, setIsExpanded] = useState(false);
-
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded);
   };
+
   const longComment = comment.length > 130;
   const displayComment =
     longComment && !isExpanded ? `${comment.slice(0, 130)}...` : comment;
@@ -26,5 +28,4 @@ function Comment({ comment }: { comment: string }) {
     </div>
   );
 }
-
 export default Comment;

@@ -18,17 +18,16 @@ type ImageInputContainerProps = {
 function ImageInputContainer(props: ImageInputContainerProps) {
   const { image, name, action, text } = props;
   const [isUpdateFormVisible, setUpdateFormVisible] = useState(false);
-
   return (
     <div className='mb-8'>
       <Image
         src={image}
         width={200}
         height={200}
-        className='rounded-md object-cover mb-4 w-[200px] h-[200px]'
+        className='rounded object-cover mb-4 w-[200px] h-[200px]'
         alt={name}
+        priority
       />
-
       <Button
         variant='outline'
         size='sm'
