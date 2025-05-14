@@ -7,12 +7,11 @@ function Hero() {
     <section className='grid grid-cols-1 lg:grid-cols-2 gap-24 items-center'>
       <div>
         <h1 className='max-w-2xl font-bold text-4xl tracking-tight sm:text-6xl'>
-          We are changing the way people shop
+          Where Comfort Meets Character
         </h1>
         <p className='mt-8 max-w-xl text-lg leading-8 text-muted-foreground'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-          maxime laboriosam, deserunt velit qui quia? Dolor dolores esse
-          corporis. Dolores.
+          Discover thoughtfully designed pieces that turn your space into a sanctuary. From cozy beds to statement lighting and stylish accents,
+          Haven & Hue brings comfort and personality home.
         </p>
         <Button asChild size='lg' className='mt-10'>
           <Link href='/products'>Our Products</Link>

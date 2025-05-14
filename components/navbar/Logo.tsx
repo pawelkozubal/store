@@ -6,7 +6,7 @@ function Logo() {
   return (
     <Button size='icon' asChild>
       <Link href='/'>
-        <VscCode className='w-6 h-6' />
+        Haven & Hue <VscCode className='w-6 h-6' />
       </Link>
     </Button>
   );
